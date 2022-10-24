@@ -1,0 +1,51 @@
+body {
+	font-family: Tahoma, "Lucida Grande", Arial, sans-serif;
+	font-size: 62.5%;
+	background-color: lightgrey;
+}
+h1 {
+	display: block;
+	line-height: 50px;
+	border-top: 3px solid yellow;
+	border-bottom: 3px solid yellow;
+	height: 50px;
+	padding-left: 28px;
+	background-color: darkcyan;
+	font-size: 2.4em;
+	color: white;
+}
+h2 {
+	/*display: inline-block;*/
+	font-size: 1.8em;
+	margin: 10px;
+	color: #666666;
+	border-bottom: 1px solid black;
+}
+h3 {
+	margin: 10px;
+	font-size: 2em;
+	color: #14556B;
+	text-align: center;
+}
+p, ul, ol {
+	font-size: 1.8em;
+	line-height: 130%;
+}
+
+ul {
+	color: #666666;
+}
+
+div:nth-child(2) {
+	background-color: yellowgreen;
+	float: right;
+	width: 20vw;
+	border: 1px solid orange;
+	border-top: 4px solid orange;
+}
+
+hr {
+	width: 90vw;
+	height: 1px;
+	background-color: black;
+}

@@ -1,0 +1,34 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+.figure {
+    width: 250px;
+}
+
+h1 {
+    border: 2px dashed deepskyblue;
+    padding: 4px;
+}
+
+.intro {
+    /*display: block;*/
+    border: 2px dashed deepskyblue;
+    padding: 5px;
+}
+
+img {
+    box-shadow: 4px 4px lightgrey;
+    border-style: double;
+    border-width: 5px;
+}
+
+.containter {
+    display: flex;
+    gap: 50px;
+}
+
+.figure {
+    text-align: center;
+}

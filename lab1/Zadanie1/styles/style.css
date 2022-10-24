@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#first {
+    padding: 20px;
+    background-color: cornflowerblue;
+    font-family: "Arial Black", sans-serif;
+    font-size: 19px;
+    color: whitesmoke;
+}
+
+#second {
+    height: 60px;
+    width: 90%;
+    margin: 30px auto;
+    background-color: indianred;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    overflow: auto;
+    text-transform: uppercase;
+}
+
+#third {
+    height: 150px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: darkcyan;
+    font-family: Calibri, sans-serif;
+    font-size: 30px;
+    color: coral;
+}
+
+#fourth {
+    margin-top: 100px;
+    background-color: blueviolet;
+    font-family: Dialog, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+table {
+    margin: 100px auto;
+}
+
+.pierwsza tr:nth-child(2n) {
+    background-color: navajowhite;
+}
+
+.pierwsza tr:nth-child(2n - 1) {
+    background-color: #b4b4b4;
+}
+
+.pierwsza th {
+    width: 250px;
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.pierwsza td:nth-child(2n - 1) {
+    width: 250px;
+    height: 50px;
+}
+
+.druga {
+    border-collapse: collapse;
+}
+
+.druga td {
+    border: 3px solid black;
+}
+
+.druga th {
+    width: 300px;
+    height: 75px;
+    background-color: #33270d;
+    border: 3px solid black;
+}
+
+.druga td {
+    background-color: grey;
+    width: 300px;
+    height: 75px;
+}
+
+.obrazki {
+    width: 80%;
+    min-height: 300px;
+    margin: 0 auto;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+img:nth-child(1) {
+    margin: 10px;
+    float: left;
+
+}
+
+img:nth-child(3) {
+    margin: 10px;
+    float: right;
+    /*margin-left: -10px;*/
+    /*margin-top: 390px;*/
+}
+
+div p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.kraje {
+    margin: 100px auto;
+    width: 50%;
+    border: 3px solid deepskyblue;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.kraje ul:nth-child(1) {
+    float: left;
+    list-style: none;
+    background-color: blue;
+    padding: 10px;
+}
+
+.kraje ul li {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.kraje ul:nth-child(2) {
+    float: right;
+    list-style: none;
+    background-color: red;
+    padding: 10px;
+}
+
+

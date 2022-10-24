@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background-color: indianred;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-left: 60px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 1vw;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    height: 90px;
+    line-height: 50px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background-color: #883b3b;
+}
+
+#hamburger {
+    width: 30px;
+    position: relative;
+    margin-right: 30px;
+    display: none;
+}
+
+#hamburger .helement {
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+    margin: 5px 0 5px;
+}
+
+#hamburger input {
+    display: block;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+}
+
+#hamburger input:hover {
+    cursor: pointer;
+}
+
+#hamburger
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    #hamburger {
+        display: block;
+    }
+}
