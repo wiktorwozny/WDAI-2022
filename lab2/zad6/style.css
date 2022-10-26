@@ -10,7 +10,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 90px;
+    height: 80px;
     background-color: indianred;
 }
 
@@ -31,9 +31,9 @@ nav {
 nav a {
     display: block;
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase;
-    height: 90px;
+    height: 80px;
     line-height: 50px;
     padding: 20px;
     font-size: 15px;
@@ -43,36 +43,136 @@ nav a:hover {
     background-color: #883b3b;
 }
 
-#hamburger {
-    width: 30px;
-    position: relative;
-    margin-right: 30px;
+/*hamburger -----------------------------*/
+
+input {
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    z-index: 12;
+    opacity: 0;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
     display: none;
 }
 
-#hamburger .helement {
-    height: 5px;
-    background-color: black;
-    border-radius: 5px;
-    margin: 5px 0 5px;
-}
-
-#hamburger input {
-    display: block;
+.box {
+    top: 15px;
+    right: 20px;
     position: absolute;
-    top: 5px;
-    width: 30px;
-    height: 30px;
-    opacity: 0.5;
+    width: 60px;
+    height: 60px;
+    background: indianred;
+    border-radius: 10px;
+    display: none;
 }
 
-#hamburger input:hover {
+.hamburger {
+    position: relative;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: .7s;
+}
+
+.element {
+    width: 0;
+    height: 15vh;
+    background: #f59090;
+    position: absolute;
+}
+
+
+.element:hover {
+    background-color: indianred;
+}
+
+.element p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 15vh;
+    color: white;
+    font-size: 0;
     cursor: pointer;
 }
 
-#hamburger
+input:checked + .box .hamburger {
+    transform: rotate(360deg);
+}
+
+.hamburger span {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 25px;
+    transition: .25s;
+}
+
+input:checked + .box .hamburger span:nth-child(1) {
+    opacity: 0;
+}
+
+.hamburger span:nth-child(2) {
+    transform: translateY(-10px);
+}
+
+input:checked + .box .hamburger span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.hamburger span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+input:checked + .box .hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/*---------------------------------------*/
+
+main {
+    padding: 20px;
+}
 
 @media (max-width: 768px) {
+
+    /*mobile menu transitions*/
+    input:checked ~ div.element p {
+        font-size: 15px;
+    }
+
+    input:checked ~ div.element:nth-child(3) {
+        position: static;
+        transition: width 1s ease-in-out;
+        width: 100%;
+    }
+
+    input:checked ~ div.element:nth-child(4) {
+        position: static;
+        transition: width 1s ease-in-out;
+        width: 100%;
+        transition-delay: .5s;
+    }
+
+    input:checked ~ div.element:nth-child(5) {
+        position: static;
+        transition: width 1s ease-in-out;
+        width: 100%;
+        transition-delay: 1s;
+    }
+
+    input:checked ~ div.element:nth-child(6) {
+        position: static;
+        transition: width 1s ease-in-out;
+        width: 100%;
+        transition-delay: 1.5s;
+    }
 
     .logo {
         font-size: 20px;
@@ -82,8 +182,11 @@ nav a:hover {
         display: none;
     }
 
+    input {
+        display: block;
+    }
 
-    #hamburger {
+    .box {
         display: block;
     }
 }
