@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-top: 25px;
+    background-color: transparent;
+    perspective: 1000px;
+    width: 300px;
+    height: 500px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/*transitions*/
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/*front*/
+.imagewrapper {
+    height: 40%;
+    background-image: url("images/pic1.jpg");
+    background-size: 100%;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+}
+
+.filtr {
+    width: 100%;
+    height: 100%;
+    background-color: darkorange;
+    opacity: 0.6;
+}
+
+.napis {
+    background-color: darkorange;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    opacity: 0.8;
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+}
+
+.gorny {
+    top: 95px;
+}
+
+.dolny {
+    top: 140px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    margin-top: 15px;
+}
+
+.info p {
+    font-size: 13px;
+}
+
+hr {
+    width: 70%;
+    height: 1px;
+}
+
+/*back*/
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(242,196,10);
+    background: linear-gradient(90deg, rgba(242,196,10,1) 0%, rgba(241,121,9,1) 47%, rgba(194,95,3,1) 100%);
+    transform: rotateY(180deg);
+}
+
+.back .price {
+    color: white;
+    text-align: center;
+}
+
+.back .price p {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.back .price h1 {
+    font-size: 45px;
+}
+
+.back a {
+    display: block;
+    height: 50px;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4b4b4b;
+    background-color: white;
+    line-height: 35px;
+    border-radius: 20px;
+}
+
+.back a:hover {
+    background-color: #c5c5c5;
+}

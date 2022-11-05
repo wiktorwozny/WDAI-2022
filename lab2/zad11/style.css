@@ -1,0 +1,187 @@
+:root {
+    --display1: 0;
+    --display2: 0;
+    --display3: 0;
+    --pos11: 3;
+    --pos12: 2;
+    --pos21: 3;
+    --pos22: 2;
+    --pos31: 3;
+    --pos32: 2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellowgreen;
+}
+
+.menu {
+    display: block;
+    width: 400px;
+    margin: 10px auto;
+    list-style: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.menu-element::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 30px;
+    bottom: -15px;
+    z-index: 1;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid hotpink;
+}
+
+li {
+    padding: 20px;
+    color: white;
+    position: relative;
+    background-color: hotpink;
+}
+
+li:nth-of-type(4) {
+    padding: 0;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 58px;
+    height: 58px;
+    color: white;
+}
+
+input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.menu-element:nth-child(1) input:nth-child(1) {
+    z-index: var(--pos11);
+}
+
+.menu-element:nth-child(1) input:nth-child(2) {
+    z-index: var(--pos12);
+}
+
+.menu-element:nth-child(3) input:nth-child(1) {
+    z-index: var(--pos21);
+}
+
+.menu-element:nth-child(3) input:nth-child(2) {
+    z-index: var(--pos22);
+}
+
+.menu-element:nth-child(5) input:nth-child(1) {
+    z-index: var(--pos31);
+}
+
+.menu-element:nth-child(5) input:nth-child(2) {
+    z-index: var(--pos32);
+}
+
+.inner-menu {
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+}
+
+.inner-menu:nth-of-type(1) {
+    height: var(--display1);
+}
+
+.inner-menu:nth-of-type(2) {
+    height: var(--display2);
+}
+
+.inner-menu:nth-of-type(3) {
+    height: var(--display3);
+}
+
+.inner-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #152774;
+    padding: 20px 0 20px 50px;
+    position: relative;
+}
+
+.inner-menu-element:hover {
+    background: -moz-linear-gradient(top, #111838 0%, #222e68 48%, #243e85 52%, #273e7e 100%);
+    background: -webkit-linear-gradient(top, #111838 0%, #222e68 48%, #243e85 52%, #273e7e 100%);
+    background: linear-gradient(top, #111838 0%, #222e68 48%, #243e85 52%, #273e7e 100%);
+}
+
+.inner-menu-element:hover::before, .inner-menu-element:hover::after {
+    content: '';
+    position: absolute;
+    border-top: 29px solid transparent;
+    border-bottom: 29px solid transparent;
+}
+
+.inner-menu-element:hover::before {
+    left: 0;
+    top:0;
+    border-left: 15px solid yellowgreen;
+}
+
+.inner-menu-element:hover::after {
+    top: 0;
+    right: 0;
+    border-right: 15px solid yellowgreen;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(1) > input:nth-child(1):checked){
+    --display1: 175px;
+    --pos11: 2;
+    --pos12: 3;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(1) > input:nth-child(2):checked){
+    --display1: 0px;
+    --pos11: 3;
+    --pos12: 2;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(3) > input:nth-child(1):checked){
+    --display2: 117px;
+    --pos21: 2;
+    --pos22: 3;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(3) > input:nth-child(2):checked){
+    --display2: 0;
+    --pos21: 3;
+    --pos22: 2;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(5) > input:nth-child(1):checked){
+    --display3: 59px;
+    --pos31: 2;
+    --pos32: 3;
+}
+
+:root:has(body > .menu > .menu-element:nth-child(5) > input:nth-child(2):checked){
+    --display3: 0;
+    --pos31: 3;
+    --pos32: 2;
+}
+
+

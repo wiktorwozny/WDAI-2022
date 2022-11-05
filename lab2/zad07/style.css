@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 200vh;
+}
+
+.videocallwrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 10px solid whitesmoke;
+    background-color: #0e3762;
+    /*ewentualnie wysokosc do zmiany przed oddaniem*/
+    height: 600px;
+}
+
+.userimagewrapper {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    border: 1px solid black;
+    width: 120px;
+    height: 170px;
+    background-image: url("images/szibka.jpg");
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+.volumemeter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+    background-color: whitesmoke;
+    width: 25px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+.volumemeter img {
+    margin-bottom: 8px;
+}
+
+.volumemeter .circle {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.volumemeter .circle:nth-child(n + 4) {
+    background-color: deepskyblue;
+}
+
+.imagewrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 350px;
+    background-image: url("images/piesioduzy.jpg");
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.options .bigcircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.bigcircle:nth-child(1):hover, .bigcircle:nth-child(2):hover {
+    background-color: #c5c5c5;
+    cursor: pointer;
+}
+
+.bigcircle:nth-child(3) {
+    background-color: orangered;
+}
+
+.options .bigcircle:nth-child(3):hover {
+    background-color: #7a1c00;
+    cursor: pointer;
+}
+
+.bigcircle:nth-child(3) img {
+    filter: invert(100%);
+}
+
+@media (max-width: 500px) {
+
+    .imagewrapper {
+        width: 100%;
+        background-size: 120%;
+        background-position-x: center;
+        background-position-y: 0;
+    }
+
+    .userimagewrapper {
+        width: 150px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 356px) {
+
+    .imagewrapper {
+        background-size: 135%;
+        background-position: center;
+    }
+
+    .userimagewrapper {
+        width: 120px;
+        height: 140px;
+    }
+}

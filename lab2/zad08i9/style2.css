@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 800px;
+    width: 100vw;
+    background-color: dodgerblue;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 800px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-evenly;
+    width: 50%;
+    color: white;
+    animation: transitionIn1 1s;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header p {
+    font-size: 25px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+}
+
+a:hover {
+    background-color: #1465b2;
+}
+
+header a {
+    font-size: 20px;
+    width: 200px;
+    height: 80px;
+    border: 1px solid white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    width: 25%;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 25px;
+    animation: transitionIn2 1s;
+}
+
+.form h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    height: 40%;
+}
+
+input {
+    display: block;
+    border: none;
+    height: 30%;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.form a {
+    background-color: dodgerblue;
+    width: 100px;
+    height: 50px;
+}
+
+.form a:hover {
+    background-color: #1465b2;
+}
+
+@media (max-width: 1440px) {
+
+    .bg, .wrapper {
+        height: 700px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    header a {
+        width: 160px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .form h1 {
+        font-size: 25px;
+    }
+
+    label {
+        height: 35%;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .form a {
+        width: 85px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .bg, .wrapper {
+        height: 600px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    header a {
+        width: 130px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .form h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .form a {
+        width: 70px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .bg, .wrapper {
+        height: 430px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    header a {
+        width: 110px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .form h1 {
+        font-size: 17px;
+    }
+
+    input {
+        font-size: 11px;
+        padding: 7px;
+    }
+
+    .form a {
+        width: 58px;
+        height: 35px;
+        font-size: 10px;
+    }
+}
+
+@media (orientation: portrait), (max-width: 728px) {
+
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        gap: 100px;
+    }
+
+    .bg {
+        height: 700px;
+    }
+
+    header {
+        margin-top: 40px;
+        width: 80%;
+        gap: 60px;
+        animation: transitionIn3 1s;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    header a {
+        width: 140px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .form {
+        height: 400px;
+        width: 60%;
+        animation: transitionIn4 1s;
+        margin-bottom: 40px;
+    }
+
+    .form h1 {
+        font-size: 30px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .form a {
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    header {
+        gap: 25px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .bg {
+        height: 500px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    header a {
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .form {
+        height: 300px;
+        width: 60%;
+    }
+
+    .form h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .form a {
+        width: 70px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+}
+
+@keyframes transitionIn1 {
+
+    from {
+        transform: translateX(-150px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn2 {
+
+    from {
+        transform: translateX(150px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn3 {
+
+    from {
+        transform: translateY(-150px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn4 {
+
+    from {
+        transform: translateY(150px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

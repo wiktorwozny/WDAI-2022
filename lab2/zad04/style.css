@@ -85,7 +85,7 @@ nav div div {
 
 }
 
-.dropdown-content:after{
+.dropdown-content::after{
     content:''; /* Required to display content */
     position: absolute; /* Sets the position absolute to the top div */
     top: 5px;

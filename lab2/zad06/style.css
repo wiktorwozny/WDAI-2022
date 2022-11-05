@@ -5,7 +5,6 @@
     font-family: Arial, sans-serif;
 }
 
-
 header {
     display: flex;
     align-items: center;
@@ -79,13 +78,17 @@ input {
     transition: .7s;
 }
 
-.element {
-    width: 0;
-    height: 15vh;
-    background: #f59090;
+.wrapper {
+    width: 100vw;
     position: absolute;
+    left: -100vw;
+    transition: left 1s ease-in-out;
 }
 
+.element {
+    height: 15vh;
+    background: #f59090;
+}
 
 .element:hover {
     background-color: indianred;
@@ -97,7 +100,7 @@ input {
     text-align: center;
     line-height: 15vh;
     color: white;
-    font-size: 0;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -143,35 +146,10 @@ main {
 @media (max-width: 768px) {
 
     /*mobile menu transitions*/
-    input:checked ~ div.element p {
-        font-size: 15px;
-    }
-
-    input:checked ~ div.element:nth-child(3) {
-        position: static;
-        transition: width 1s ease-in-out;
-        width: 100%;
-    }
-
-    input:checked ~ div.element:nth-child(4) {
-        position: static;
-        transition: width 1s ease-in-out;
-        width: 100%;
-        transition-delay: .5s;
-    }
-
-    input:checked ~ div.element:nth-child(5) {
-        position: static;
-        transition: width 1s ease-in-out;
-        width: 100%;
-        transition-delay: 1s;
-    }
-
-    input:checked ~ div.element:nth-child(6) {
-        position: static;
-        transition: width 1s ease-in-out;
-        width: 100%;
-        transition-delay: 1.5s;
+    input:checked ~ div.wrapper {
+        /*width: 100vw;*/
+        left: 0;
+        transition: left 1s ease-in-out;
     }
 
     .logo {
