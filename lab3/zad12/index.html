@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="game-info">
+        <div class="health-container">
+            <p class="health">JD</p>
+        </div>
+        <div class="name-container">
+            <p class="name"></p>
+        </div>
+        <div class="points-container">
+            <p class="points"></p>
+        </div>
+    </div>
+
+    <div class="start-game-container purple">
+        <div class="start-game">
+            <p>Enter your username:</p>
+            <input id="username" type="text" required
+                   pattern="([a-z]|[A-Z]|[0-9]){1,12}">
+            <p id="input-pattern-info">1 - 12 characters or numbers, no special signs</p>
+            <button id="start-button">Play</button>
+        </div>
+    </div>
+
+    <div class="loss-container purple">
+        <div class="loss">
+            <p>You lost!</p>
+            <div class="scores">
+                <p>Highest scores:</p>
+                <ol>
+                </ol>
+            </div>
+            <button id="next-game-btn">Play again!</button>
+        </div>
+    </div>
+
+    <div class="board">
+
+    </div>
+
+    <div id="cursor">
+        <div id="dot"></div>
+    </div>
+
+</body>
+</html>

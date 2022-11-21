@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#blue {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: dodgerblue;
+    margin: 20px auto;
+}
+
+#red {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+    background-color: indianred;
+}
+
+#yellow {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+

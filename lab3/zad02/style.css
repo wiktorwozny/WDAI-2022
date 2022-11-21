@@ -1,0 +1,16 @@
+img {
+    display: block;
+    border: 10px solid indianred;
+    margin: 10px auto;
+    width: auto;
+    height: 300px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    padding: 5px;
+}
+
+

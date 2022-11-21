@@ -1,0 +1,17 @@
+button {
+    font-size: 20px;
+    padding: 10px;
+}
+
+div {
+    margin-top: 20px;
+    background-color: dodgerblue;
+    color: white;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+}

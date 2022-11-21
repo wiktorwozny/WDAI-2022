@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="wrapper-inner">
+
+            <form>
+                <div class="name">
+                    <p>imie i nazwisko</p>
+                    <input id="nameInput" type="text" required pattern="[\p{Lu}]{1}[\p{Ll}]+[ ]{1}[\p{Lu}]{1}[\p{Ll}]+([-]{1}[\p{Lu}]{1}[\p{Ll}]+)?">
+                </div>
+                <div class="phone">
+                    <p>telefon</p>
+                    <input id="phoneInput" type="text" required pattern="([ ]{0,}[0-9][ ]{0,}){9}|([ ]{0,}[\+]?([ ]{0,}[0-9][ ]{0,}){12})">
+                </div>
+                <div class="btn">
+                    <button id="add">Dodaj</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
