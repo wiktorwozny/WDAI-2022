@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc0bbae8-3bb0-4708-ac4a-3eaa0ef8e3f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/tripservice" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tripservice/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tripservice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tripservice/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tripservice/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tripservice/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/tripservice/src/app/app.component.html" afterDir="false" />
@@ -32,7 +34,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\wikiv\\WebstormProjects\\wdai\\lab4\\tripservice\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\wikiv\\WebstormProjects\\wdai\\WDAI-2022\\lab4\\tripservice\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -45,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670512931776</updated>
       <workItem from="1670512933148" duration="2386000" />
+      <workItem from="1670521013646" duration="223000" />
     </task>
     <servers />
   </component>
