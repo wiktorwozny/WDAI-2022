@@ -1,0 +1,62 @@
+<div class="wrapper">
+
+  <h1>Dodaj wycieczkę</h1>
+
+  <form [formGroup]="tripForm" (ngSubmit)="onSubmit(tripForm)">
+    <div class="input">
+      <label for="name">Nazwa wycieczki</label>
+      <input id="name" formControlName="name">
+      <div class="alert" *ngIf="tripForm.controls['name'].invalid && tripForm.controls['name'].touched">
+        Wprowadź poprawną nazwę wycieczki!</div>
+    </div>
+    <div class="input">
+      <label for="country">Docelowy kraj</label>
+      <input id="country" formControlName="country">
+      <div class="alert" *ngIf="tripForm.controls['country'].invalid && tripForm.controls['country'].touched">
+        Wprowadź poprawny kraj docelowy wycieczki!</div>
+    </div>
+    <div class="input">
+      <label for="price">Cena (w $)</label>
+      <input id="price" formControlName="price">
+      <div class="alert" *ngIf="tripForm.controls['price'].invalid && tripForm.controls['price'].touched">
+        Wprowadź poprawną cenę!</div>
+    </div>
+    <div class="input">
+      <label for="start-date">Data rozpoczęcia</label>
+      <input id="start-date" type="date" formControlName="startDate">
+      <div class="alert" *ngIf="tripForm.controls['startDate'].invalid && tripForm.controls['startDate'].touched">
+        Wprowadź poprawną datę rozpoczęcia!</div>
+    </div>
+    <div class="input">
+      <label for="end-date">Data zakończenia</label>
+      <input id="end-date" type="date" formControlName="endDate">
+      <div class="alert" *ngIf="tripForm.controls['endDate'].invalid && tripForm.controls['endDate'].touched">
+        Wprowadź poprawną datę zakończenia!</div>
+    </div>
+    <div class="input">
+      <label for="places">Liczba miejsc</label>
+      <input id="places" formControlName="places">
+      <div class="alert" *ngIf="tripForm.controls['places'].invalid && tripForm.controls['places'].touched">
+        Wprowadź prawidłową ilość miejsc!</div>
+    </div>
+    <div class="input">
+      <label for="desc">Opis</label>
+      <input id="desc" formControlName="desc">
+      <div class="alert" *ngIf="tripForm.controls['desc'].invalid && tripForm.controls['desc'].touched">
+        Wprowadź poprawny opis!</div>
+    </div>
+    <div class="input">
+      <label for="path">Ścieżka do zdjęcia</label>
+      <input id="path" formControlName="path">
+      <div class="alert" *ngIf="tripForm.controls['path'].invalid && tripForm.controls['path'].touched">
+        Wprowadź poprawną ścieżkę!</div>
+    </div>
+
+    <div class="button-wrapper">
+      <button type="submit" [disabled]="tripForm.invalid">
+        Dodaj
+      </button>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.price input {
+  display: block;
+  width: 100px;
+}
+
+.date input {
+  display: block;
+  width: 100px;
+}

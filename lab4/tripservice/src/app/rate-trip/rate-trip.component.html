@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="stars">
+    <img [ngStyle]="{'filter': currentRate >= 1 ? 'grayscale(0%)' : 'grayscale(90%)'}" (click)="change(1)"
+         src="https://img.icons8.com/fluency/30/null/star.png"/>
+    <img [ngStyle]="{'filter': currentRate >= 2 ? 'grayscale(0%)' : 'grayscale(90%)'}" (click)="change(2)"
+         src="https://img.icons8.com/fluency/30/null/star.png"/>
+    <img [ngStyle]="{'filter': currentRate >= 3 ? 'grayscale(0%)' : 'grayscale(90%)'}" (click)="change(3)"
+         src="https://img.icons8.com/fluency/30/null/star.png"/>
+    <img [ngStyle]="{'filter': currentRate >= 4 ? 'grayscale(0%)' : 'grayscale(90%)'}" (click)="change(4)"
+         src="https://img.icons8.com/fluency/30/null/star.png"/>
+    <img [ngStyle]="{'filter': currentRate >= 5 ? 'grayscale(0%)' : 'grayscale(90%)'}" (click)="change(5)"
+         src="https://img.icons8.com/fluency/30/null/star.png"/>
+  </div>
+  <span>{{ tripToRate.rating.toFixed(2) }} ({{ tripToRate.noOfRates }})</span>
+</div>

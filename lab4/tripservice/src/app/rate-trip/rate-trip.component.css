@@ -1,0 +1,19 @@
+/*ngb-rating {*/
+/*  color: var(--bs-yellow);*/
+/*  font-size: 30px;*/
+/*}*/
+
+.stars img {
+  /*filter: grayscale(90%);*/
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+span {
+  display: block;
+}

@@ -1,0 +1,37 @@
+.bar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+  font-size: 40px;
+  text-decoration: none;
+  color: whitesmoke;
+  line-height: 70px;
+  padding: 0 20px;
+}
+
+.logo a:hover {
+  text-shadow: #FC0 1px 0 10px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons a {
+  display: flex;
+  height: 100%;
+  line-height: 70px;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0 20px;
+}
+
+.buttons a:hover {
+  background-color: grey;
+}
