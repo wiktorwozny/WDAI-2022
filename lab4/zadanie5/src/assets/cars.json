@@ -1,0 +1,24 @@
+{
+  "Lamborghini": {
+    "Aventador": [["Grey", "Red", "Blue"], "The Petrol engine is 6498 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Aventador has a mileage of 7.69 kmpl & Ground clearance of Aventador is 125mm."],
+    "Gallardo": [["Yellow", "Limegreen"], "The Petrol engine is 5204 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Gallardo has a mileage of 6.4 kmpl . The Gallardo is a 2 seater 10 cylinder car and has length of 4345mm, width of 1900mm and a wheelbase of 2560mm."],
+    "Huracan": [["Blue", "White", "Green", "Custom"], "The Petrol engine is 5204 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the Huracan has a mileage of 10.6 to 11.24 kmpl & Ground clearance of Huracan is 125mm. The Huracan is a 2 seater 10 cylinder car and has length of 4459mm, width of 1924mm and a wheelbase of 2620mm."]
+  },
+
+  "Porsche": {
+    "991": [["White", "Darkblue"], "The Petrol engine is 2981 cc and 3996 cc . It is available with Manual & Automatic transmission. Depending upon the variant and fuel type the 911 has a mileage of & Ground clearance of 911 is 109. The 911 is a 4 seater 6 cylinder car and has length of 4519mm, width of 1852mm and a wheelbase of 2450mm."],
+    "Cayenne": [["Black"], "Porsche Cayenne is a 5 seater SUV available in a price range of ₹ 1.26 - 1.93 Crore. It is available in 6 variants, 2995 to 3996 cc engine options and 1 transmission option : Automatic (TC)."]
+  },
+
+  "BMW": {
+    "M3 e46": [["Grey", "White", "Darkblue"], "The BMW M3 E46 Coupé took the hearts of real sports car fans by storm when it launched in 2000. With a low weight construction and the high-rev concept of its inline 6-cylinder engine, for many it embodied a return to the virtues of the iconic BMW M3 E30."],
+    "M3 Touring": [["White", "Black", "Cyan", "Blue"], "The model with the legendary 10-cylinder engine and 507 hp was already a sports car for individualists as a sedan – as a Touring it achieved rarity status.\nIn 2000, the M GmbH presented the BMW M3 Touring Concept. With its concept designed for maximum dynamics, the prototype was a pointer to the future."],
+    "M8": [["Black"], "BMW M8 is a 4 seater Coupe available in a price range of ₹ 2.23 - 2.55 Crore. It is available in 2 variants, 4395 cc engine option and 1 transmission option : Automatic (TC)."],
+    "I8": [["White"], "The Petrol engine is 1499 cc . It is available with Automatic transmission. Depending upon the variant and fuel type the i8 has a mileage of 47.45 kmpl & Ground clearance of i8 is 117mm. The i8 is a 4 seater 3 cylinder car and has length of 4689mm, width of 2218mm and a wheelbase of 2850mm."],
+    "M4": [["Black"], "The BMW M4 is a high-performance version of the BMW 4 Series coupes and convertibles developed by BMW's motorsport division, BMW M, and marketed since 2014."]
+  },
+
+  "KIA": {
+    "Stinger": [["Brown", "Yellow"], "Kia's big sports sedan—the 2022 Stinger—aims high to challenge the automotive elites from Europe, and nearly pulls it off. When compared with rivals such as the Audi A5 Sportback and the BMW 4-series Gran Coupe, the Stinger offers a very similarly premium look and feel as well as lots of driving verve, making it a great option for enthusiasts on a budget."]
+  }
+}

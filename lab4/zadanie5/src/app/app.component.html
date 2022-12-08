@@ -1,0 +1,39 @@
+<div class="container">
+
+  <ng-container *ngIf="displayBrands">
+    <h2>Choose Brand:</h2>
+    <select [(ngModel)]="selectedBrand" (ngModelChange)="brandSelect()">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option *ngFor="let brand of cars | keyvalue">
+        {{ brand.key }}
+      </option>
+    </select>
+  </ng-container>
+
+  <ng-container *ngIf="displayModels">
+    <h2>Choose Model:</h2>
+    <select [(ngModel)]="selectedModel" (ngModelChange)="modelSelect()">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option *ngFor="let model of cars[selectedBrand] | keyvalue">
+        {{ model.key }}
+      </option>
+    </select>
+  </ng-container>
+
+  <ng-container class="colors" *ngIf="displayColors">
+    <h2>Choose Color:</h2>
+      <ol>
+        <li *ngFor="let col of cars[selectedBrand][selectedModel][0]" [id]="col" (click)="colorSelect($event)">
+          <div [style.background-color]="col"></div>
+          {{ col }}
+        </li>
+      </ol>
+  </ng-container>
+
+  <ng-container *ngIf="displayCarChoice">
+    <h1>Your car choice:</h1>
+    <p>{{ car }}</p>
+    <p>{{ carDetails }}</p>
+  </ng-container>
+
+</div>

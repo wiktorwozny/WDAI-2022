@@ -1,0 +1,16 @@
+<app-subject-displayinfo style="margin: 10px" [selectedSubject] = "selectedSubject">
+</app-subject-displayinfo>
+
+<div class="wrapper">
+
+  <h1>Choose your subject!</h1>
+
+  <div class="subjects">
+    <div *ngFor="let sbj of subjects">
+      <h3>{{ sbj.title }}</h3>
+      <p>{{ sbj.basicInfo }}</p>
+      <button (click)="subjectSelect($event)">Learn more!</button>
+    </div>
+  </div>
+
+</div>

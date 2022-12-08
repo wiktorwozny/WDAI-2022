@@ -1,0 +1,46 @@
+.wrapper {
+  width: 80vw;
+  -webkit-box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.subjects > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 23px -6px rgba(66, 68, 90, 1);
+  padding: 10px;
+  gap: 20px;
+}
+
+button {
+  width: 50%;
+  font-size: 17px;
+  background-color: indianred;
+  color: whitesmoke;
+  border-radius: 10px;
+  padding: 7px;
+  cursor: pointer;
+}
