@@ -1,0 +1,11 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+

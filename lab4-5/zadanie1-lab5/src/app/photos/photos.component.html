@@ -1,0 +1,15 @@
+<div class="wrapper">
+
+  <h1>Photos:</h1>
+  <div class="photos-wrapper">
+    <div class="container" *ngFor="let photo of photos">
+      <div class="photo" *ngIf="photo.id < 100">
+        <h3 style="font-weight: normal">AlbumID: {{photo.albumId}}, ImageID: {{photo.id}}</h3>
+        <a routerLink="/photos/{{photo.id}}">
+          <img src="{{photo.thumbnailUrl}}">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>

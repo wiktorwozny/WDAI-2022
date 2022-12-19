@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 45px;
+}

@@ -1,0 +1,35 @@
+.footer-wrapper {
+  background-color: #616161;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 50px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tel {
+  display: flex;
+  gap: 5px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}

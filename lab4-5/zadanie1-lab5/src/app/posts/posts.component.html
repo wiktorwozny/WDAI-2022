@@ -1,0 +1,51 @@
+<div class="wrapper">
+
+  <div class="form-wrapper">
+    <h3>Add post</h3>
+
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+
+      <div class="input">
+        <label for="userid">UserID</label>
+        <input id="userid" formControlName="userid">
+        <div class="alert" *ngIf="postForm.controls['userid'].invalid && postForm.controls['userid'].touched">
+          Enter valid id!
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="title">Title</label>
+        <input id="title" formControlName="title">
+        <div class="alert" *ngIf="postForm.controls['title'].invalid && postForm.controls['title'].touched">
+          Enter valid title!
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="body">Content</label>
+        <input id="body" formControlName="body">
+        <div class="alert" *ngIf="postForm.controls['body'].invalid && postForm.controls['body'].touched">
+          Enter valid content!
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button type="submit" [disabled]="postForm.invalid">
+          Dodaj
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <h1>Posts:</h1>
+
+  <div class="posts-wrapper">
+    <div class="post" *ngFor="let post of posts">
+      <h3 style="font-weight: normal">UserID: {{post.userId}}, PostID: {{post.id}}</h3>
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </div>
+  </div>
+
+</div>

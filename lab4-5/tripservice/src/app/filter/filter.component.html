@@ -1,0 +1,45 @@
+<div class="wrapper">
+
+  <div class="country">
+    <p>docelowy kraj:</p>
+    <select [(ngModel)]="selectedCountry" (ngModelChange)="submitFilters()">
+      <option>Wszystkie</option>
+      <option *ngFor="let country of countries">{{ country }}</option>
+    </select>
+  </div>
+
+  <div class="price">
+    <div class="minRange">
+      <p>min cena: {{ selectedMinPrice }} $</p>
+      <input type="range" placeholder="min" min="{{ minPrice }}" max="{{ maxPrice }}" [(ngModel)]="selectedMinPrice" (ngModelChange)="submitFilters()">
+    </div>
+    <div class="maxRange">
+      <p>max cena: {{ selectedMaxPrice }} $</p>
+      <input type="range" placeholder="max" min="{{ minPrice }}" max="{{ maxPrice }}" [(ngModel)]="selectedMaxPrice" (ngModelChange)="submitFilters()">
+    </div>
+  </div>
+
+  <div class="date">
+    <div class="startDate">
+      <p>od:</p>
+      <input type="date" [(ngModel)]="selectedStartDate" (ngModelChange)="submitFilters()">
+    </div>
+    <div class="endDate">
+      <p>do:</p>
+      <input type="date" [(ngModel)]="selectedEndDate" (ngModelChange)="submitFilters()">
+    </div>
+  </div>
+
+  <div class="rating">
+    <p>ilość gwiazdek:</p>
+    <select [(ngModel)]="selectedRating" (ngModelChange)="submitFilters()">
+      <option>Dowolna</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+</div>

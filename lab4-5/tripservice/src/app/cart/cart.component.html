@@ -1,0 +1,24 @@
+<h1 class="empty" style="min-height: 100vh" *ngIf="cartService.getItems().length === 0">Upsss, Twój koszyk jest pusty...</h1>
+
+<div class="container" style="min-height: 100vh" *ngIf="cartService.getItems().length > 0">
+
+  <h1>Wycieczki w Twoim koszyku:</h1>
+
+  <div class="item" *ngFor="let item of cartService.getItems()">
+    <div class="image">
+      <img src='{{ item.imagelink }}' alt="">
+    </div>
+
+    <div class="info">
+      <h3>{{ item.name | uppercase }}</h3>
+      <h3>{{ item.country | uppercase }}</h3>
+      <h4>cena: {{ item.unitprice }}$</h4>
+      <p>od: {{ item.startdate }} do: {{ item.enddate }}</p>
+      <div class="buttons">
+        <button id="buy" (click)="buyNow(item)">Kup teraz!</button>
+        <button id="remove" (click)="remove(item)">Usuń</button>
+      </div>
+    </div>
+  </div>
+
+</div>

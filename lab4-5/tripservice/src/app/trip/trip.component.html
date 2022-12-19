@@ -1,0 +1,66 @@
+<a class='cartLink' routerLink="/cart">
+  <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart--v1.png" alt="cartIcon"/>
+
+  <div class="cartInfo">
+    <p *ngIf="cartService.getItems().length === 0">0 items</p>
+    <p *ngIf="cartService.getItems().length === 1">1 item</p>
+    <p *ngIf="cartService.getItems().length > 1">{{ cartService.getItems().length }} items</p>
+    <p *ngIf="cartService.getItems().length > 0">total: {{ cartService.getCartValue() }}$</p>
+  </div>
+</a>
+
+<div class="wrapper">
+
+  <div class="container" *ngIf="trip.length > 0">
+
+    <div class="imgs">
+      <img src="{{ trip[0].imagelink }}">
+      <button id="arrowLeft" (click)="prevPhoto()">
+        <img src="https://img.icons8.com/ios/50/FFFFFF/circled-left--v1.png"/>
+      </button>
+      <button id="arrowRight" (click)="nextPhoto()">
+        <img src="https://img.icons8.com/ios/50/FFFFFF/circled-right.png"/>
+      </button>
+      <div class="white"></div>
+    </div>
+
+    <div class="info">
+      <h2>{{ trip[0].name | uppercase }}</h2>
+      <h2 style="font-weight: normal; letter-spacing: 1px;">{{ trip[0].country | uppercase }}</h2>
+      <p style="font-weight: bold">ceny od {{ trip[0].unitprice | currency }}</p>
+      <p>od: {{ trip[0].startdate }} do: {{ trip[0].enddate }}</p>
+      <p>wolnych miejsc: {{ trip[0].placelimit - howManyInCart(trip[0]) }}</p>
+      <p style="font-size: 15px">{{ trip[0].description }}</p>
+
+      <div class="buttons">
+        <img (click)="unbook(trip[0])"
+             class="removeBtn"
+             [ngStyle]="{'filter': howManyInCart(trip[0]) > 0 ? 'invert(0)' : 'invert(80%)'}"
+             src="https://img.icons8.com/ios-glyphs/30/null/minus.png" alt="icon"/>
+        <img (click)="book(trip[0])"
+             class="addBtn"
+             [ngStyle]="{'filter': trip[0].placelimit > howManyInCart(trip[0]) ? 'invert(0)' : 'invert(80%)'}"
+             src="https://img.icons8.com/ios-glyphs/30/null/macos-maximize.png" alt="icon"/>
+      </div>
+      <app-rate-trip [tripToRate]="trip[0]"></app-rate-trip>
+
+    </div>
+
+  </div>
+
+  <div class="reviews-container">
+
+    <h1 *ngIf="reviews.length > 0">Opinie:</h1>
+
+    <div class="review" *ngFor="let review of reviews">
+      <h2>{{ review.nick }}</h2>
+      <p *ngIf="review.date !=='' ">wycieczka zakupiona {{ review.date }}</p>
+      <p>{{ review.review }}</p>
+
+    </div>
+
+  </div>
+
+  <app-trip-review (submitFormEvent)="addReview($event)"></app-trip-review>
+
+</div>

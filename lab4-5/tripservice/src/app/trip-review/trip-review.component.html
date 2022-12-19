@@ -1,0 +1,32 @@
+<div class="wrapper">
+
+  <h1>Dodaj swoją opinię</h1>
+
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+    <div class="input">
+      <label for="nickname">Twój nickname</label>
+      <input id="nickname" formControlName="nickname">
+      <div class="alert" *ngIf="reviewForm.controls['nickname'].invalid && reviewForm.controls['nickname'].touched">
+        Wprowadź poprawny nickname!
+      </div>
+    </div>
+    <div class="input">
+      <label for="review">Treść opinii</label>
+      <textarea id="review" rows="4" formControlName="review"></textarea>
+      <div class="alert" *ngIf="reviewForm.controls['review'].invalid && reviewForm.controls['review'].touched">
+        Opinia powinna zawierać > 50 znaków!
+      </div>
+    </div>
+    <div class="input">
+      <label for="date">Data zakupu (opcjonalnie)</label>
+      <input id="date" type="date" formControlName="date">
+    </div>
+
+    <div class="button-wrapper">
+      <button type="submit" [disabled]="reviewForm.invalid">
+        Dodaj
+      </button>
+    </div>
+  </form>
+
+</div>

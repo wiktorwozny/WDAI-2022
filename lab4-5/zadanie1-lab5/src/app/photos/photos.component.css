@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 20px;
+}
+
+.photos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

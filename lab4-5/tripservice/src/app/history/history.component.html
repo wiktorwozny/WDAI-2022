@@ -1,0 +1,25 @@
+<div class="empty" *ngIf="history.getItems().length === 0" style="min-height: 100vh">
+  <h1 class="empty">Nie masz aktualnie kupionych żadnych wycieczek...</h1>
+  <a routerLink="/trips">Zmieńmy to!</a>
+</div>
+
+
+<div class="wrapper" style="min-height: 100vh" *ngIf="history.getItems().length > 0">
+  <div class="elem" *ngFor="let item of history.getItems()">
+    <div class="img">
+      <img src="{{item[0].imagelink}}" alt="">
+    </div>
+    <div class="info">
+      <h2>{{ item[0].name | uppercase }}</h2>
+      <h2>{{ item[0].country | uppercase }}</h2>
+      <p>cena: {{ item[0].unitprice }}$</p>
+      <p>od: {{ item[0].startdate }} do: {{ item[0].enddate }}</p>
+      <p class="status">status:
+        <span *ngIf="checkStatus(item[0]) === 'ended'" style="color: green">zakończona</span>
+        <span *ngIf="checkStatus(item[0]) === 'in progress'" style="color: orangered">w trakcie</span>
+        <span *ngIf="checkStatus(item[0]) === 'pending'" style="color: #0d75da">już wkrótce...</span>
+      </p>
+    </div>
+  </div>
+</div>
+
